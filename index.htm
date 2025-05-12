@@ -37,7 +37,7 @@
       font-size: 36px;
       color: #ff4d4d;
       margin-bottom: 20px;
-      animation: fadeInUp 2s ease-in-out;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     .section p {
@@ -46,7 +46,7 @@
       font-size: 18px;
       color: #555;
       line-height: 1.6;
-      animation: fadeInUp 2.5s ease-in-out;
+      animation: fadeInUp 1.5s ease-in-out;
     }
 
     .image-grid {
@@ -55,19 +55,40 @@
       justify-content: center;
       gap: 20px;
       margin-top: 40px;
-      animation: fadeInUp 3s ease-in-out;
     }
 
-    .image-grid img {
-      width: 220px;
+    .image-card {
+      text-align: center;
+      max-width: 240px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .image-card img {
+      width: 100%;
       border-radius: 20px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1);
       transform: scale(1);
       transition: transform 0.3s ease;
     }
 
-    .image-grid img:hover {
+    .image-card img:hover {
       transform: scale(1.05);
+    }
+
+    .image-card h4 {
+      margin-top: 16px;
+      font-size: 20px;
+      color: #ff4d4d;
+      font-weight: 700;
+      animation: fadeInUp 2.2s ease-in-out;
+    }
+
+    .image-card p {
+      font-size: 16px;
+      color: #444;
+      margin-top: 8px;
+      line-height: 1.5;
+      animation: fadeInUp 2.5s ease-in-out;
     }
 
     footer {
@@ -76,7 +97,7 @@
       background: #ff4d4d;
       color: white;
       font-size: 14px;
-      animation: fadeInUp 3.5s ease-in-out;
+      animation: fadeInUp 3s ease-in-out;
     }
 
     @keyframes fadeInUp {
@@ -84,6 +105,11 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
+    @media (max-width: 768px) {
+      .section h3 { font-size: 28px; }
+      .section p { font-size: 16px; }
+      .image-card { max-width: 90%; }
+    }
   </style>
 </head>
 <body>
@@ -97,10 +123,21 @@
     <p>
       Today we celebrate the kindest soul, the brightest smile, and the heart that touches everyone around her. Happy 21st birthday, Sarah!
     </p>
+
     <div class="image-grid">
-      <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah 1">
-      <img src="https://i.ibb.co.com/j9gx93n7/1747064716482.jpg" alt="Sarah 2">
-      <img src="https://i.ibb.co.com/XZvxVzj4/1747064695556.jpg" alt="Sarah 3">
+      <div class="image-card">
+        <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah 1">
+        <h4>Wish</h4>
+        <p>
+          Semoga panjang umur, sehat selalu, diberi kemudahan segala urusannya, kebahagiaan, dan kesuksesan di dunia. Semoga semua impian dan keinginan kamu menjadi kenyataan, dan semoga tahun ini dipenuhi dengan petualangan baru dan momen gak terlupakan.
+        </p>
+      </div>
+      <div class="image-card">
+        <img src="https://i.ibb.co.com/j9gx93n7/1747064716482.jpg" alt="Sarah 2">
+      </div>
+      <div class="image-card">
+        <img src="https://i.ibb.co.com/XZvxVzj4/1747064695556.jpg" alt="Sarah 3">
+      </div>
     </div>
   </section>
 
