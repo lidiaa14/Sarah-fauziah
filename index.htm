@@ -17,53 +17,10 @@
       overflow-x: hidden;
     }
     .hero {
-      position: relative;
-      background: #ffe6e6;
-      color: #b30000;
-      padding: 140px 20px;
-      text-align: center;
-      overflow: hidden;
+      background: url('https://i.ibb.co/JRZJ2rhv/Picsart-25-05-13-01-24-54-979.jpg') center/cover no-repeat;
+      height: 100vh;
+      width: 100%;
     }
-    .hero h1 {
-      font-size: 80px;
-      font-weight: 900;
-      margin-bottom: 10px;
-      font-family: 'Montserrat', cursive;
-      animation: popIn 1.2s ease-out forwards;
-    }
-    .hero h2 {
-      font-size: 28px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      animation: fadeInUp 2s ease-out forwards;
-    }
-
-    /* Balon dekoratif */
-    .decor {
-      position: absolute;
-      width: 100px;
-      height: 130px;
-      background: radial-gradient(circle at 30% 30%, #ff4d4d, #cc0000);
-      border-radius: 50% 50% 45% 45% / 55% 55% 50% 50%;
-      box-shadow: inset -4px -6px 10px rgba(0,0,0,0.2);
-    }
-
-    .decor::after {
-      content: "";
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 10px;
-      height: 15px;
-      background: #b30000;
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-
-    .top-left { top: 20px; left: 20px; }
-    .top-right { top: 20px; right: 20px; }
-    .bottom-left { bottom: 20px; left: 20px; }
-    .bottom-right { bottom: 20px; right: 20px; }
 
     .section {
       padding: 80px 20px;
@@ -109,32 +66,20 @@
       font-size: 14px;
       animation: fadeInUp 3.5s ease-in-out;
     }
-    @keyframes popIn {
-      0% { opacity: 0; transform: scale(0.5); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(40px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 60px; }
-      .hero h2 { font-size: 20px; }
+      .hero {
+        height: 70vh;
+      }
     }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <div class="decor top-left"></div>
-    <div class="decor top-right"></div>
-    <div class="decor bottom-left"></div>
-    <div class="decor bottom-right"></div>
-    <h2>HAPPY</h2>
-    <h1>Birthday</h1>
-    <h2>Dear Sarah Fauziah</h2>
-  </section>
+  <section class="hero"></section>
 
   <section class="section">
     <h3>Celebrating You</h3>
