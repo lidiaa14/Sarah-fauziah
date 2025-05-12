@@ -16,15 +16,6 @@
       background: #fff0f0;
       color: #333;
       overflow-x: hidden;
-      position: relative;
-    }
-
-    canvas#snow {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 9999;
     }
 
     .hero img {
@@ -118,16 +109,16 @@
 </head>
 <body>
 
-<canvas id="snow"></canvas>
-
+<!-- Background Banner -->
 <section class="hero">
-  <img src="https://i.ibb.co/dwDsTW4p/Picsart-25-05-13-01-24-54-979-waifu2x-art-noise3.png" alt="Birthday Banner">
+  <img src="https://i.ibb.co/JRZJ2rhv/Picsart-25-05-13-01-24-54-979.jpg" alt="Birthday Banner">
 </section>
 
+<!-- Main Content -->
 <section class="section">
   <h3>Celebrating You</h3>
   <p>
-    Today we celebrate the kindest soul, the brightest smile, and the heart that touches everyone around her. Happy 21st birthday, Sarah ♥️
+    Today we celebrate the kindest soul, the brightest smile, and the heart that touches everyone around her. Happy 21st birthday, Sarah!
   </p>
 
   <div class="image-grid">
@@ -159,64 +150,11 @@
   Made with love for Sarah Fauziah - Happy 21st Birthday
 </footer>
 
-<script>
-  const canvas = document.getElementById("snow");
-  const ctx = canvas.getContext("2d");
-  let width, height;
-  let flakes = [];
-
-  function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  }
-
-  window.addEventListener("resize", resize);
-  resize();
-
-  function createFlake() {
-    return {
-      x: Math.random() * width,
-      y: Math.random() * height,
-      radius: Math.random() * 4 + 1,
-      speed: Math.random() * 1 + 0.5,
-      drift: Math.random() * 1 - 0.5,
-    };
-  }
-
-  for (let i = 0; i < 150; i++) {
-    flakes.push(createFlake());
-  }
-
-  function drawFlakes() {
-    ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = "white";
-    ctx.beginPath();
-    for (let flake of flakes) {
-      ctx.moveTo(flake.x, flake.y);
-      ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
-    }
-    ctx.fill();
-    moveFlakes();
-  }
-
-  function moveFlakes() {
-    for (let flake of flakes) {
-      flake.y += flake.speed;
-      flake.x += flake.drift;
-      if (flake.y > height) {
-        flake.y = -flake.radius;
-        flake.x = Math.random() * width;
-      }
-    }
-  }
-
-  function animate() {
-    drawFlakes();
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-</script>
+<!-- Musik Ulang Tahun -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 </body>
 </html>
