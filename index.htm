@@ -119,25 +119,39 @@
       once: true
     });
   </script>
-  <audio id="musik" autoplay muted loop>
+  <style>
+  .musik-btn {
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg, #d946ef, #9333ea);
+    color: white;
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+
+  .musik-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.8);
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 15px rgba(147, 51, 234, 0.6); }
+    50% { box-shadow: 0 0 25px rgba(147, 51, 234, 1); }
+    100% { box-shadow: 0 0 15px rgba(147, 51, 234, 0.6); }
+  }
+</style>
+
+<button class="musik-btn" onclick="document.getElementById('musik').play()">
+  Klik di sini untuk memulai musik spesial
+</button>
+
+<audio id="musik" loop>
   <source src="https://raw.githubusercontent.com/lidiaa14/Sarah-fauziah/27ef95b67935711c261070b7dcc0bc809ed57fea/Happy%20Birthday%20(Piano%20Version).mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
 </audio>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const audio = document.getElementById('musik');
-    audio.muted = false;
-    const playPromise = audio.play();
-
-    if (playPromise !== undefined) {
-      playPromise.then(_ => {
-        // Otomatis berhasil diputar
-      }).catch(error => {
-        console.log('Autoplay gagal: ', error);
-      });
-    }
-  });
-</script>
 </body>
 </html>
