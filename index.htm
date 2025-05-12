@@ -105,6 +105,31 @@
       .section p { font-size: 16px; }
       .image-card { max-width: 90%; }
     }
+
+    /* Play Music Button */
+    .music-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+
+    .music-button:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
@@ -150,8 +175,13 @@
   Made with love for Sarah Fauziah - Happy 21st Birthday
 </footer>
 
-<!-- Musik Ulang Tahun -->
-<audio autoplay loop>
+<!-- Tombol Musik -->
+<button class="music-button" onclick="document.getElementById('bg-music').play()" title="Play Music">
+  ♪
+</button>
+
+<!-- Audio -->
+<audio id="bg-music" loop>
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
