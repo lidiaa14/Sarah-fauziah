@@ -151,7 +151,7 @@ footer {
 
   </style>
 </head>
-<body><canvas id="glitter-canvas"></canvas> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon1" /> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon2" /> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon3" /> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon4" />
+<body><canvas id="glitter-canvas"></canvas> <img src="https://i.imgur.com/MIK2Etu.png" class="balloon balloon1" /> <img src="https://i.imgur.com/MIK2Etu.png" class="balloon balloon2" /> <img src="https://i.imgur.com/MIK2Etu.png" class="balloon balloon3" /> <img src="https://i.imgur.com/MIK2Etu.png" class="balloon balloon4" />
 
 <section class="opening">
   <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah">
@@ -168,5 +168,15 @@ footer {
   </div>
 </section><footer>
   Made with love for Sarah Fauziah - Happy 21st Birthday
-</footer></body>
+</footer><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script><script>
+  const canvas = document.getElementById('glitter-canvas');
+  const confetti = window.confetti.create(canvas, { resize: true });
+  setInterval(() => {
+    confetti({
+      particleCount: 6,
+      spread: 60,
+      origin: { y: 0 },
+    });
+  }, 400);
+</script></body>
 </html>
