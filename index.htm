@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,220 +10,88 @@
       padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
-    }
+    }body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #fff5f5, #ffe6e6, #ffdada);
+  color: #333;
+  overflow-x: hidden;
+}
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to bottom, #fff5f5, #ffe6e6, #ffdada);
-      color: #333;
-      overflow-x: hidden;
-    }
-
-    /* Fullscreen opening */
-    .opening {
-      position: relative;
-      height: 100vh;
-      background: linear-gradient(to bottom, #fff5f5, #ffe6e6);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .opening img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-      margin-bottom: 20px;
-      animation: popIn 1.2s ease-out forwards;
-    }
-
-    .opening h1 {
-      font-size: 32px;
-      font-weight: 900;
-      color: #ff4d4d;
-      animation: slideIn 1.5s ease-out forwards;
-    }
-
-    .scroll-down {
-      margin-top: 40px;
-      font-size: 14px;
-      opacity: 0.8;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes popIn {
-      0% { opacity: 0; transform: scale(0.5); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes slideIn {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .hero img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .nav-buttons {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 9999;
-    }
-
-    .nav-buttons a {
-      background: #ff4d4d;
-      color: white;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: background 0.3s ease;
-    }
-
-    .nav-buttons a:hover {
-      background: #e03d3d;
-    }
-
-    .section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .section h3 {
-      font-size: 36px;
-      color: #ff4d4d;
-      margin-bottom: 20px;
-      animation: fadeInUp 1s ease-in-out;
-    }
-
-    .section p {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 18px;
-      color: #555;
-      line-height: 1.6;
-      animation: fadeInUp 1.5s ease-in-out;
-    }
-
-    .image-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .image-card {
-      text-align: center;
-      max-width: 240px;
-      animation: fadeInUp 2s ease-in-out;
-      transition: transform 0.3s ease;
-    }
-
-    .image-card:hover {
-      transform: translateY(-10px);
-    }
-
-    .image-card img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
-
-    .image-card h4 {
-      margin-top: 16px;
-      font-size: 20px;
-      color: #ff4d4d;
-      font-weight: 700;
-      animation: fadeInUp 2.2s ease-in-out;
-    }
-
-    .image-card p {
-      font-size: 16px;
-      color: #444;
-      margin-top: 8px;
-      line-height: 1.5;
-      animation: fadeInUp 2.5s ease-in-out;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #ff4d4d;
-      color: white;
-      font-size: 14px;
-      animation: fadeInUp 3s ease-in-out;
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .section h3 { font-size: 28px; }
-      .section p { font-size: 16px; }
-      .image-card { max-width: 90%; }
-    }
-
-    .music-button {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #ff4d4d;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 28px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      cursor: pointer;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s;
-    }
-
-    .music-button:hover {
-      transform: scale(1.1);
-    }
-
-    .opening {
+.opening {
   position: relative;
   height: 100vh;
-  background: linear-gradient(-45deg, #ffd6d6, #ffeaea, #ffcaca, #ffe6e6);
+  background: linear-gradient(-45deg, #ffb3b3, #ffe6e6, #ffcaca);
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  overflow: hidden;
   z-index: 2;
+}
+
+.opening img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  animation: fadeInScale 1.2s ease-out forwards;
+}
+
+.opening h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: white;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.scroll-down {
+  margin-top: 40px;
+  font-size: 14px;
+  color: white;
+  opacity: 0.8;
+  animation: bounce 2s infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.6); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.balloon {
+  position: absolute;
+  width: 60px;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.7;
+}
+.balloon1 { top: 20%; left: 10%; animation-delay: 0s; }
+.balloon2 { top: 25%; left: 30%; animation-delay: 2s; }
+.balloon3 { top: 15%; left: 70%; animation-delay: 4s; }
+.balloon4 { top: 30%; left: 85%; animation-delay: 6s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
 }
 
 #glitter-canvas {
@@ -237,137 +104,69 @@
   pointer-events: none;
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.section {
+  padding: 80px 20px;
+  text-align: center;
 }
+.section h3 {
+  font-size: 36px;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  animation: fadeInUp 2s ease-in-out;
+}
+.section p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  animation: fadeInUp 3s ease-in-out;
+}
+.image-grid img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 14px;
+  animation: fadeInUp 3.5s ease-in-out;
+}
+
   </style>
 </head>
-<body>
+<body><canvas id="glitter-canvas"></canvas> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon1" /> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon2" /> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon3" /> <img src="https://i.ibb.co/fCHTxMT/balloon.png" class="balloon balloon4" />
 
-<script>
-  window.addEventListener('beforeunload', function () {
-    window.scrollTo(0, 0);
-  });
-  window.onload = function () {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-  };
-</script>
-<canvas id="glitter-canvas"></canvas>
-
-<script>
-  const canvas = document.getElementById('glitter-canvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-
-  function createParticle() {
-    return {
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 1.5 + 0.5,
-      dx: (Math.random() - 0.5) * 0.3,
-      dy: (Math.random() - 0.5) * 0.3,
-      opacity: Math.random()
-    };
-  }
-
-  for (let i = 0; i < 100; i++) {
-    particles.push(createParticle());
-  }
-
-  function drawParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let p of particles) {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
-      ctx.fill();
-      p.x += p.dx;
-      p.y += p.dy;
-      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-    }
-    requestAnimationFrame(drawParticles);
-  }
-
-  drawParticles();
-</script>
-  
-<!-- Opening Section -->
 <section class="opening">
   <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah">
   <h1>Happy 21st Birthday, Sarah!</h1>
   <div class="scroll-down">Scroll down to celebrate...</div>
-</section>
-
-<!-- Navigation Buttons -->
-<div class="nav-buttons">
-  <a href="#wish">Wish</a>
-  <a href="#foryou">For You</a>
-  <a href="#gift">Gift</a>
-</div>
-
-<!-- Header Photo -->
-<section class="hero">
-  <img src="https://i.ibb.co/JRZJ2rhv/Picsart-25-05-13-01-24-54-979.jpg" alt="Birthday Banner">
-</section>
-
-<!-- Main Content -->
-<section class="section" id="wish">
+</section><section class="section">
   <h3>Celebrating You</h3>
   <p>
     Today we celebrate the kindest soul, the brightest smile, and the heart that touches everyone around her. Happy 21st birthday, Sarah!
-  </p>
-
-  <div class="image-grid">
-    <div class="image-card">
-      <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah 1">
-      <h4>Wish</h4>
-      <p>
-        Semoga panjang umur, sehat selalu, diberi kemudahan segala urusannya, kebahagiaan, dan kesuksesan di dunia. Semoga semua impian dan keinginan kamu menjadi kenyataan, dan semoga tahun ini dipenuhi dengan petualangan baru dan momen gak terlupakan.
-      </p>
-    </div>
-    <div class="image-card" id="foryou">
-      <img src="https://i.ibb.co.com/j9gx93n7/1747064716482.jpg" alt="Sarah 2">
-      <h4>For you</h4>
-      <p>
-        Jangan sering makan seblak, dikurangin minum manisnya, banyak minum air putih, sempatkan olahraga ♥️
-      </p>
-    </div>
-    <div class="image-card" id="gift">
-      <img src="https://i.ibb.co.com/XZvxVzj4/1747064695556.jpg" alt="Sarah 3">
-      <h4>Kado</h4>
-      <p>
-        Udah duluan yuhuuuuuu 🥳
-      </p>
-    </div>
+  </p>  <div class="image-grid">
+    <img src="https://i.ibb.co/4ZBLPtp/sarah1.jpg" alt="Sarah 1">
+    <img src="https://i.ibb.co/YW4dmFg/sarah2.jpg" alt="Sarah 2">
+    <img src="https://i.ibb.co/pf90z7M/sarah3.jpg" alt="Sarah 3">
   </div>
-</section>
-
-<footer>
+</section><footer>
   Made with love for Sarah Fauziah - Happy 21st Birthday
-</footer>
-
-<!-- Music Button -->
-<button class="music-button" onclick="document.getElementById('bg-music').play()" title="Play Music">
-  ♪
-</button>
-
-<!-- Background Music -->
-<audio id="bg-music" loop>
-  <source src="Happy Birthday (Piano Version).mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-</body>
+</footer></body>
 </html>
