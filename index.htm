@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #fff5f5;
+      background: linear-gradient(to bottom, #fff5f5, #ffe6e6, #ffdada);
       color: #333;
       overflow-x: hidden;
     }
@@ -24,7 +24,7 @@
     .opening {
       position: relative;
       height: 100vh;
-      background: #fff5f5;
+      background: linear-gradient(to bottom, #fff5f5, #ffe6e6);
       color: white;
       display: flex;
       flex-direction: column;
@@ -72,14 +72,12 @@
       50% { transform: translateY(-10px); }
     }
 
-    /* Header Image */
     .hero img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    /* Navigation Buttons */
     .nav-buttons {
       position: fixed;
       top: 20px;
@@ -106,7 +104,6 @@
       background: #e03d3d;
     }
 
-    /* Sections */
     .section {
       padding: 80px 20px;
       text-align: center;
@@ -189,7 +186,6 @@
       .image-card { max-width: 90%; }
     }
 
-    /* Play Music Button */
     .music-button {
       position: fixed;
       top: 20px;
@@ -217,10 +213,14 @@
 </head>
 <body>
 
-<!-- Scroll to Top on Load -->
 <script>
-  window.onload = () => {
+  window.addEventListener('beforeunload', function () {
     window.scrollTo(0, 0);
+  });
+  window.onload = function () {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   };
 </script>
 
