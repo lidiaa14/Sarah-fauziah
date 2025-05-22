@@ -358,9 +358,70 @@
 .ig-logo:hover {
   transform: scale(1.1);
 }
+
+    /* Navigasi horizontal kiri atas - hanya muncul di desktop */
+@media (min-width: 769px) {
+  .desktop-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 24px;
+    z-index: 10;
+  }
+
+  .desktop-nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    background: rgba(0,0,0,0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  .desktop-nav a:hover {
+    background: rgba(0,0,0,0.5);
+  }
+
+  /* Sembunyikan nav mobile di desktop */
+  .nav-buttons, .scroll-down {
+    display: none;
+  }
+
+  /* Gaya ulang opening */
+  .opening {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 80px;
+    text-align: left;
+    background-image: url('https://i.ibb.co/8PtQXYN/purple-birthday-bg.jpg'); /* ganti sesuai */
+  }
+
+  .left-side img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .left-side h1 {
+    font-size: 42px;
+    color: white;
+  }
+}
   </style>
 </head>
 <body>
+  <!-- Desktop menu -->
+  <div class="desktop-nav">
+    <a href="#wish">Wish</a>
+    <a href="#foryou">For You</a>
+    <a href="#gift">Gift</a>
+  </div>
 
 <script>
   window.addEventListener('beforeunload', function () {
@@ -424,13 +485,7 @@
     <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah">
     <h1>Happy 21st Birthday, Sarah!</h1>
   </div>
-
-  <div class="side-nav">
-    <a href="#wish">Wish</a>
-    <a href="#foryou">For You</a>
-    <a href="#gift">Gift</a>
-  </div>
-
+  
   <div class="scroll-down">Scroll down to celebrate...</div>
 </section>
 
