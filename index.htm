@@ -290,26 +290,7 @@
   }
 }
 
-    @media (min-width: 769px) {
-  .desktop-nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    gap: 24px;
-    z-index: 10;
-  }
-
-  .desktop-nav a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    background: rgba(0,0,0,0.3);
-    padding: 6px 12px;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
+    
 
   .desktop-nav a:hover {
     background: rgba(0,0,0,0.5);
@@ -321,26 +302,7 @@
   }
 
       /* Navigasi khusus desktop (atas kiri horizontal) */
-@media (min-width: 769px) {
-  .desktop-nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    gap: 24px;
-    z-index: 10;
-  }
 
-  .desktop-nav a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    background: rgba(0,0,0,0.3);
-    padding: 6px 12px;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
 
   .desktop-nav a:hover {
     background: rgba(0,0,0,0.5);
@@ -471,7 +433,46 @@
 .ig-logo:hover {
   transform: scale(1.1);
 }
-  </style>
+  
+/* Desktop-specific navigation bar */
+@media (min-width: 769px) {
+  .desktop-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 24px;
+    z-index: 10;
+  }
+
+  .desktop-nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    background: rgba(0,0,0,0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  .desktop-nav a:hover {
+    background: rgba(0,0,0,0.5);
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+</style>
 </head>
 <body>
   <!-- Desktop menu -->
