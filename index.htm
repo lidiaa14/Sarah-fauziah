@@ -475,11 +475,21 @@
 .ig-logo:hover {
   transform: scale(1.1);
 }
+
+    .hide-mobile {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .hide-mobile {
+    display: flex;
+  }
+}
   </style>
 </head>
 <body>
   <!-- Desktop menu -->
-  <div class="desktop-nav">
+  <div class="desktop-nav hide-mobile">
     <a href="#wish">Wish</a>
     <a href="#foryou">For You</a>
     <a href="#gift">Gift</a>
