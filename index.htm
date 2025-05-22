@@ -234,40 +234,58 @@
   /* Desktop */
 @media (min-width: 769px) {
   .opening {
-    background-image: url('https://i.ibb.co/HDf5sfdQ/Picsart-25-05-22-18-54-51-830.png'); /* Gambar yang kamu upload */
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 60px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 80px;
+    background-image: url('https://i.ibb.co/HDf5sfdQ/Picsart-25-05-22-18-54-51-830.png'); /* ganti sesuai file kamu */
+    position: relative;
     text-align: left;
   }
 
-  .opening img {
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 80px;
+  }
+
+  .left-side img {
     width: 200px;
     height: 200px;
-    margin-bottom: 0;
-    margin-right: 40px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
-  .opening h1 {
-    font-size: 48px;
-    max-width: 400px;
+  .left-side h1 {
+    font-size: 42px;
+    color: #fff;
   }
 
-  .nav-buttons {
-    flex-direction: column;
+  .side-nav {
     position: absolute;
-    top: 60px;
-    left: 30px;
-    gap: 20px;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left top;
+    display: flex;
+    gap: 40px;
   }
 
-  .nav-buttons a {
+  .side-nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
     font-size: 16px;
-    padding: 10px 14px;
+    transition: opacity 0.3s;
   }
 
-  .scroll-down {
+  .side-nav a:hover {
+    opacity: 0.7;
+  }
+
+  .nav-buttons, .scroll-down {
     display: none;
   }
 }
@@ -401,17 +419,18 @@
   drawParticles();
 </script>
   
-<!-- Opening Section -->
 <section class="opening">
-  <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah">
-  <h1>Happy 21st Birthday, Sarah!</h1>
-  
-<!-- Navigation Buttons -->
-<div class="nav-buttons">
-  <a href="#wish">Wish</a>
-  <a href="#foryou">For You</a>
-  <a href="#gift">Gift</a>
-</div>
+  <div class="left-side">
+    <img src="https://i.ibb.co.com/21tGQSR9/1747064732824.jpg" alt="Sarah">
+    <h1>Happy 21st Birthday, Sarah!</h1>
+  </div>
+
+  <div class="side-nav">
+    <a href="#wish">Wish</a>
+    <a href="#foryou">For You</a>
+    <a href="#gift">Gift</a>
+  </div>
+
   <div class="scroll-down">Scroll down to celebrate...</div>
 </section>
 
