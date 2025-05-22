@@ -315,12 +315,12 @@
     background: rgba(0,0,0,0.5);
   }
 
-  /* Sembunyikan nav mobile di desktop */
+  /* hide nav dekstop */
   .nav-buttons, .scroll-down {
     display: none;
   }
 
-      /* Navigasi khusus desktop (atas kiri horizontal) */
+      /* Navigasi khusus desktop */
 @media (min-width: 769px) {
   .desktop-nav {
     position: absolute;
@@ -373,7 +373,7 @@
   }
 }
 
-/* Sembunyikan desktop-nav di ponsel secara paksa */
+/* hide desktop-nav brutal */
 @media (max-width: 768px) {
   .desktop-nav {
     display: none !important;
@@ -496,13 +496,11 @@
   </div>
 
 <script>
-  window.addEventListener('beforeunload', function () {
-    window.scrollTo(0, 0);
-  });
   window.onload = function () {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
   };
 </script>
 <canvas id="glitter-canvas"></canvas>
