@@ -373,10 +373,14 @@
   }
 }
 
-/* Sembunyikan menu desktop-nav di ponsel */
+/* Sembunyikan desktop-nav di ponsel secara paksa */
 @media (max-width: 768px) {
   .desktop-nav {
-    display: none;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
 }
 
